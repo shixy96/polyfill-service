@@ -29,6 +29,7 @@
     "build:sass": "mkdir -p dist/css && sass src/assets/css/index.scss  --style=compressed --load-path=node_modules --load-path=node_modules/@financial-times | postcss --use autoprefixer --output dist/css/index.css --map",
     "build:js": "mkdir -p dist/js && esbuild src/assets/js/index.js --bundle --minify > dist/js/index.min.js",
     "dev": "npm run clean && nodemon --exec \"time npm run build && npm run start\"",
+    "prod": "npm run clean && npm run build && npm run start",
     "eleventy": "eleventy"
   },
   "heroku-run-build-script": true,
